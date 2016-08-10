@@ -231,6 +231,17 @@ EOF
         }
     }
 
+    public function testValidRequestQuery()
+    {
+        $query = [
+            'type' => 'full',
+        ];
+
+        $request = $this->createMockRequest('GET', '/api/pets/1', $this->getValidHeaders(), $this->getValidRequestBody(), $query);
+
+        self::assertRequestMatch($request, $this->schemaManager);
+    }
+
     /**
      * @return string
      */

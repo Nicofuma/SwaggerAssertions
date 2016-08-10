@@ -184,6 +184,13 @@
             "schema": {
               "$ref": "#/definitions/NewPet"
             }
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "description": "Type of response",
+            "required": false,
+            "type": "string"
           }
         ],
         "responses": {
